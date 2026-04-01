@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;family=Be_Vietnam_Pro:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "surface-dim": "#e3e5c3",
+            "tertiary": "#30722d",
+            "secondary-fixed": "#bbebf1",
+            "primary-fixed-dim": "#f0c3d5",
+            "on-primary": "#ffffff",
+            "on-secondary-fixed": "#13464b",
+            "secondary-container": "#bbebf1",
+            "primary-fixed": "#fed0e3",
+            "on-secondary-fixed-variant": "#346268",
+            "on-surface-variant": "#646652",
+            "tertiary-fixed-dim": "#a4ec97",
+            "surface-variant": "#e9eaca",
+            "surface-container": "#f5f6d9",
+            "error-container": "#f95630",
+            "tertiary-fixed": "#b1faa4",
+            "on-tertiary-fixed": "#044e0d",
+            "on-surface": "#373928",
+            "inverse-primary": "#fed0e3",
+            "error": "#be2d06",
+            "on-tertiary": "#ffffff",
+            "surface-container-high": "#eff0d1",
+            "tertiary-container": "#b1faa4",
+            "on-secondary-container": "#29595e",
+            "background": "#fefee5",
+            "outline": "#81826d",
+            "secondary-fixed-dim": "#addde3",
+            "on-tertiary-fixed-variant": "#2a6c28",
+            "outline-variant": "#babba4",
+            "on-error": "#ffffff",
+            "surface-tint": "#7e5a6a",
+            "primary-dim": "#714e5e",
+            "surface-container-highest": "#e9eaca",
+            "surface": "#fefee5",
+            "on-background": "#373928",
+            "on-secondary": "#ffffff",
+            "surface-bright": "#fefee5",
+            "inverse-surface": "#0e0f03",
+            "surface-container-low": "#fbfbe0",
+            "error-dim": "#b92902",
+            "secondary": "#3d6b71",
+            "primary": "#7e5a6a",
+            "primary-container": "#fed0e3",
+            "on-primary-fixed-variant": "#704e5e",
+            "on-primary-container": "#664554",
+            "on-tertiary-container": "#1f621f",
+            "on-primary-fixed": "#513241",
+            "surface-container-lowest": "#ffffff",
+            "tertiary-dim": "#236522",
+            "inverse-on-surface": "#9e9e88",
+            "secondary-dim": "#305f65",
+            "on-error-container": "#520c00"
+          },
+          fontFamily: {
+            "headline": ["Plus Jakarta Sans"],
+            "body": ["Be Vietnam Pro"],
+            "label": ["Be Vietnam Pro"]
+          },
+          borderRadius: {"DEFAULT": "0.5rem", "lg": "0.75rem", "xl": "1rem", "full": "9999px"},
+        },
+      },
+    }
+  </script>
+<style>.material-symbols-outlined {
+    font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24
+    }
+body {
+    background-color: #fefee5;
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuBzNB6Ls5LxvPiTQ8oyHobfgXk2YlcU2uBmYXHL6EUhS1pml2fozAMx_9dnQ_TygBoEYYYFgU1AZaTSNQNLo1NV4ftUC-YRWdDkzHzVlCWsMsmQEKaAdMg3SVEWB2fz2PYI1kkyYhhiEWvyKAtOWHj4dsRoLGlO8FxJaNooC1foiwAzT3wi_DKhwnw-1UZt8dSHIB5LJpw1MwMysW1O99hEjPiidtc52q5IKXefU4BWGl3iDV5tQI8FBu00vlGCCxYbVRAGVb290coF);
+    color: #373928
+    }
+.order-card-raw {
+    background-color: #f3f0ff;
+    border: 3px solid #373928;
+    box-shadow: 6px 6px 0 #373928
+    }
+.btn-action {
+    border: 2px solid #373928;
+    box-shadow: 3px 3px 0 #373928
+    }
+.btn-action:active {
+    transform: translate(2px, 2px);
+    box-shadow: 1px 1px 0 #373928
+    }
+.status-tag {
+    border: 1.5px solid currentColor
+    }
+.grid-lines {
+    background-image: linear-gradient(#e9eaca 1px, transparent 1px), linear-gradient(90deg, #e9eaca 1px, transparent 1px);
+    background-size: 20px 20px
+    }</style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="font-body selection:bg-primary-container grid-lines">
+<!-- TopAppBar -->
+<header class="bg-surface/90 backdrop-blur-md border-b-4 border-on-surface docked full-width top-0 sticky z-50 flex justify-between items-center px-6 py-4 w-full">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-3xl">restaurant</span>
+<h1 class="font-headline font-extrabold text-primary tracking-tighter text-xl uppercase italic">The Culinary Sanctuary</h1>
+</div>
+<div class="flex items-center gap-4">
+<div class="hidden md:flex gap-6 text-on-surface-variant font-label font-extrabold text-xs tracking-widest uppercase">
+<a class="hover:text-primary transition-colors" href="#">Inventory</a>
+<a class="text-primary underline decoration-4 underline-offset-8" href="#">Kitchen Live</a>
+<a class="hover:text-primary transition-colors" href="#">Reports</a>
+</div>
+<div class="h-10 w-10 border-2 border-on-surface rounded-full bg-primary-container flex items-center justify-center overflow-hidden">
+<img alt="Staff Profile" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuABfAeIFVXcvbXXJNaLN2sQDDsdiAmjaJHJMdflTI1He7QcoqlHTwW-AFXZOBm_Nr6bUKpr6PHFIuI058McYIHu7IFvm1PFdD-BtFKfBji74SR4yuyLesvtwCjU-ytx0ao4wtTnyiuEvDe-Qe6R3xMX_CEtmp2Qnks5E_oIbqiPmNTiRiTcbWXoY1gKfCGyfHx5vWajCYw93fQVLsVWQo4xxXDex_2d9EBd2PzCbMsOAz1p6pnx-c3tlpdVKKs62i04BnwC1wwhsxbD"/>
+</div>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="min-h-screen p-4 md:p-8 pb-32">
+<!-- Header Section with Stats -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10 bg-on-surface text-surface p-6 rounded-lg border-b-8 border-primary-dim">
+<div class="space-y-1">
+<h2 class="font-headline font-black text-5xl tracking-tighter uppercase italic">Kitchen Expo</h2>
+<p class="text-surface-variant font-bold tracking-wide">8 ACTIVE TICKETS // AVG PREP: 14 MINS</p>
+</div>
+<div class="flex gap-4">
+<div class="bg-surface text-on-surface border-2 border-primary px-6 py-2 rounded-lg flex items-center gap-3">
+<span class="material-symbols-outlined font-bold text-error">timer</span>
+<span class="font-black text-2xl tracking-tighter">12:40</span>
+</div>
+<button class="btn-action bg-primary text-on-primary px-8 py-2 rounded-lg font-black uppercase flex items-center gap-2 hover:opacity-95 transition-all">
+<span class="material-symbols-outlined font-bold">refresh</span>
+          Sync
+        </button>
+</div>
+</div>
+<!-- Dense Grid for Order Tickets -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+<!-- Ticket 1: Active/Urgent -->
+<div class="order-card-raw p-5 flex flex-col h-full relative overflow-hidden">
+<div class="bg-error text-on-error px-2 py-0.5 text-[10px] font-black uppercase tracking-widest absolute top-0 left-0">Urgent</div>
+<div class="flex justify-between items-start mb-4 mt-2">
+<div>
+<h3 class="font-headline font-black text-3xl text-on-surface leading-none">#442</h3>
+<span class="text-[11px] font-black uppercase tracking-tighter text-on-surface-variant">Table 12 • 2 Guests</span>
+</div>
+<div class="status-tag bg-error-container text-on-error-container px-2 py-1 rounded text-xs font-black">
+            18:24
+          </div>
+</div>
+<div class="flex-grow space-y-3 mb-6 border-y-2 border-on-surface/10 py-4">
+<div class="flex gap-3">
+<span class="font-black text-primary text-lg">2×</span>
+<span class="font-bold text-on-surface uppercase tracking-tight">Truffle Tagliatelle</span>
+</div>
+<div class="flex gap-3">
+<span class="font-black text-primary text-lg">1×</span>
+<div class="flex flex-col">
+<span class="font-bold text-on-surface uppercase tracking-tight">Pan-Seared Scallops</span>
+<span class="text-[10px] font-black text-error uppercase leading-tight mt-1 bg-error-container/20 px-1">MOD: No butter, sub olive oil</span>
+</div>
+</div>
+</div>
+<div class="flex gap-2">
+<button class="btn-action flex-1 bg-primary text-on-primary py-3 rounded font-black text-sm uppercase tracking-widest">
+            START
+          </button>
+<button class="btn-action w-12 aspect-square flex items-center justify-center rounded bg-surface-container-highest text-on-surface-variant">
+<span class="material-symbols-outlined font-bold">print</span>
+</button>
+</div>
+</div>
+<!-- Ticket 2: Preparation in Progress -->
+<div class="order-card-raw p-5 flex flex-col h-full relative overflow-hidden" style="background-color: #f5f6d9;">
+<div class="bg-secondary text-on-secondary px-2 py-0.5 text-[10px] font-black uppercase tracking-widest absolute top-0 left-0">In Prep</div>
+<div class="flex justify-between items-start mb-4 mt-2">
+<div>
+<h3 class="font-headline font-black text-3xl text-on-surface leading-none">#445</h3>
+<span class="text-[11px] font-black uppercase tracking-tighter text-on-surface-variant">Takeaway • Pickup</span>
+</div>
+<div class="status-tag bg-secondary-container text-on-secondary-container px-2 py-1 rounded text-xs font-black">
+            06:12
+          </div>
+</div>
+<div class="flex-grow space-y-3 mb-6 border-y-2 border-on-surface/10 py-4">
+<div class="flex justify-between items-center opacity-40">
+<div class="flex gap-3">
+<span class="font-black text-on-surface">1×</span>
+<span class="font-bold text-on-surface uppercase tracking-tight line-through">Miso Glazed Salmon</span>
+</div>
+<span class="material-symbols-outlined text-tertiary font-bold">check</span>
+</div>
+<div class="flex gap-3">
+<span class="font-black text-primary text-lg">1×</span>
+<span class="font-bold text-on-surface uppercase tracking-tight">Garden Herb Salad</span>
+</div>
+<div class="flex gap-3">
+<span class="font-black text-primary text-lg">1×</span>
+<span class="font-bold text-on-surface uppercase tracking-tight">Lemon Sorbet</span>
+</div>
+</div>
+<div class="flex gap-2">
+<button class="btn-action flex-1 bg-tertiary text-on-tertiary py-3 rounded font-black text-sm uppercase tracking-widest">
+            DONE
+          </button>
+<button class="btn-action w-12 aspect-square flex items-center justify-center rounded bg-surface-container-highest text-on-surface-variant">
+<span class="material-symbols-outlined font-bold">info</span>
+</button>
+</div>
+</div>
+<!-- Ticket 3: New Order -->
+<div class="order-card-raw p-5 flex flex-col h-full relative overflow-hidden">
+<div class="bg-on-surface-variant text-surface px-2 py-0.5 text-[10px] font-black uppercase tracking-widest absolute top-0 left-0">Incoming</div>
+<div class="flex justify-between items-start mb-4 mt-2">
+<div>
+<h3 class="font-headline font-black text-3xl text-on-surface leading-none">#446</h3>
+<span class="text-[11px] font-black uppercase tracking-tighter text-on-surface-variant">Table 04 • 4 Guests</span>
+</div>
+<div class="status-tag bg-surface-container-highest text-on-surface-variant px-2 py-1 rounded text-xs font-black">
+            01:45
+          </div>
+</div>
+<div class="flex-grow space-y-3 mb-6 border-y-2 border-on-surface/10 py-4">
+<div class="flex gap-3">
+<span class="font-black text-primary text-lg">4×</span>
+<span class="font-bold text-on-surface uppercase tracking-tight">Signature Burger</span>
+</div>
+<div class="flex gap-3">
+<span class="font-black text-primary text-lg">2×</span>
+<span class="font-bold text-on-surface uppercase tracking-tight">Truffle Fries</span>
+</div>
+</div>
+<div class="flex gap-2">
+<button class="btn-action flex-1 bg-primary text-on-primary py-3 rounded font-black text-sm uppercase tracking-widest">
+            START
+          </button>
+</div>
+</div>
+<!-- Ticket 4: Long List / VIP -->
+<div class="order-card-raw p-5 flex flex-col h-full relative overflow-hidden lg:row-span-2 border-primary border-4" style="background-color: #ffffff;">
+<div class="bg-primary text-on-primary px-4 py-1 text-xs font-black uppercase tracking-widest absolute top-0 left-0 w-full text-center">Chef's Table • VIP</div>
+<div class="flex justify-between items-start mb-4 mt-8">
+<div>
+<h3 class="font-headline font-black text-4xl text-on-surface leading-none italic">#440</h3>
+<span class="text-xs font-black uppercase tracking-tighter text-on-surface-variant">Multi-Course Service</span>
+</div>
+<div class="status-tag bg-primary-container text-on-primary-container px-3 py-1 rounded text-sm font-black">
+            24:10
+          </div>
+</div>
+<div class="flex-grow space-y-4 mb-6 border-y-4 border-on-surface py-4">
+<div class="flex flex-col">
+<div class="flex gap-3">
+<span class="font-black text-primary">1×</span>
+<span class="font-extrabold text-on-surface uppercase text-sm">Wagyu Beef Carpaccio</span>
+</div>
+<span class="text-[10px] bg-tertiary/10 text-tertiary font-black px-1 self-start mt-1 uppercase tracking-tighter">Ready to plate</span>
+</div>
+<div class="flex flex-col border-t-2 border-dashed border-on-surface/10 pt-2">
+<div class="flex gap-3">
+<span class="font-black text-primary">1×</span>
+<span class="font-extrabold text-on-surface uppercase text-sm">Lobster Bisque</span>
+</div>
+<span class="text-[10px] bg-tertiary/10 text-tertiary font-black px-1 self-start mt-1 uppercase tracking-tighter">Ready to plate</span>
+</div>
+<div class="flex flex-col border-t-2 border-dashed border-on-surface/10 pt-2 opacity-60">
+<div class="flex gap-3">
+<span class="font-black text-primary">1×</span>
+<span class="font-extrabold text-on-surface uppercase text-sm">Duck Confit</span>
+</div>
+<span class="text-[10px] bg-secondary/10 text-secondary font-black px-1 self-start mt-1 uppercase tracking-tighter">Searing...</span>
+</div>
+<div class="flex flex-col border-t-2 border-dashed border-on-surface/10 pt-2">
+<div class="flex gap-3">
+<span class="font-black text-primary">1×</span>
+<span class="font-extrabold text-on-surface uppercase text-sm">Filet Mignon</span>
+</div>
+<span class="text-[10px] bg-error/10 text-error font-black px-1 self-start mt-1 uppercase tracking-tighter">Medium Rare</span>
+</div>
+<div class="flex flex-col border-t-2 border-dashed border-on-surface/10 pt-2">
+<div class="flex gap-3">
+<span class="font-black text-primary">2×</span>
+<span class="font-extrabold text-on-surface uppercase text-sm">Chocolate Fondant</span>
+</div>
+<span class="text-[10px] text-on-surface-variant font-black px-1 self-start mt-1 uppercase tracking-tighter">Pending firing</span>
+</div>
+</div>
+<div class="flex flex-col gap-3">
+<button class="btn-action w-full bg-tertiary text-on-tertiary py-3 rounded font-black text-xs uppercase tracking-widest">
+            COMPLETE COURSE
+          </button>
+<button class="btn-action w-full bg-surface-container-highest text-on-surface-variant py-3 rounded font-black text-xs uppercase tracking-widest">
+            NOTIFY WAITER
+          </button>
+</div>
+</div>
+<!-- Ticket 5: Smaller Ticket -->
+<div class="order-card-raw p-5 flex flex-col h-full relative overflow-hidden">
+<div class="flex justify-between items-start mb-4 mt-2">
+<div>
+<h3 class="font-headline font-black text-3xl text-on-surface leading-none">#447</h3>
+<span class="text-[11px] font-black uppercase tracking-tighter text-on-surface-variant">Bar • Seat 2</span>
+</div>
+<div class="status-tag bg-surface-container-highest text-on-surface-variant px-2 py-1 rounded text-xs font-black">
+            00:30
+          </div>
+</div>
+<div class="flex-grow space-y-3 mb-6 border-y-2 border-on-surface/10 py-4">
+<div class="flex gap-3">
+<span class="font-black text-primary text-lg">1×</span>
+<span class="font-bold text-on-surface uppercase tracking-tight">Charcuterie Board</span>
+</div>
+</div>
+<div class="flex gap-2">
+<button class="btn-action flex-1 bg-primary text-on-primary py-3 rounded font-black text-sm uppercase tracking-widest">
+            START
+          </button>
+</div>
+</div>
+<!-- Ticket 6: Ready to go -->
+<div class="bg-surface-container border-[3px] border-dashed border-tertiary p-5 flex flex-col h-full relative overflow-hidden opacity-90">
+<div class="flex justify-between items-start mb-4">
+<div>
+<h3 class="font-headline font-black text-3xl text-on-surface leading-none">#438</h3>
+<span class="text-[11px] font-black uppercase tracking-widest text-tertiary italic">COMPLETED</span>
+</div>
+<span class="material-symbols-outlined text-tertiary font-black" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+<div class="bg-tertiary/5 border border-tertiary/20 p-4 rounded mb-4">
+<p class="text-xs font-black text-center text-on-tertiary-container uppercase tracking-tight">Fulfillment: Station A</p>
+</div>
+<button class="btn-action mt-auto w-full border-2 border-on-surface bg-surface text-on-surface py-2 rounded font-black text-[10px] uppercase tracking-widest">
+          Recall Ticket
+        </button>
+</div>
+</div>
+</main>
+<!-- BottomNavBar (Shared Component) -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pb-4 pt-2 bg-on-surface dark:bg-stone-950 backdrop-blur-xl z-50 rounded-t-xl border-t-4 border-primary shadow-2xl">
+<div class="flex flex-col items-center justify-center text-surface/60 px-4 py-2 hover:text-surface transition-all cursor-pointer">
+<span class="material-symbols-outlined">touch_app</span>
+<span class="font-label text-[10px] uppercase tracking-tighter font-black mt-1">Kiosk</span>
+</div>
+<div class="flex flex-col items-center justify-center text-surface/60 px-4 py-2 hover:text-surface transition-all cursor-pointer">
+<span class="material-symbols-outlined">point_of_sale</span>
+<span class="font-label text-[10px] uppercase tracking-tighter font-black mt-1">POS</span>
+</div>
+<!-- Active State for Kitchen -->
+<div class="flex flex-col items-center justify-center bg-primary text-on-primary rounded border-2 border-on-surface px-6 py-2 transition-all cursor-pointer transform -translate-y-2">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">outdoor_grill</span>
+<span class="font-label text-[10px] uppercase tracking-widest font-black mt-1">Kitchen</span>
+</div>
+<div class="flex flex-col items-center justify-center text-surface/60 px-4 py-2 hover:text-surface transition-all cursor-pointer">
+<span class="material-symbols-outlined">monitor</span>
+<span class="font-label text-[10px] uppercase tracking-tighter font-black mt-1">Display</span>
+</div>
+</nav>
+</body></html>
