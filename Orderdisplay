@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700;800&amp;family=Be+Vietnam+Pro:wght@400;500;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-error-container": "#520c00",
+              "error-dim": "#b92902",
+              "surface": "#fefee5",
+              "on-primary-fixed-variant": "#704e5e",
+              "on-secondary-fixed": "#13464b",
+              "secondary-dim": "#305f65",
+              "on-surface-variant": "#646652",
+              "surface-container": "#f5f6d9",
+              "surface-container-lowest": "#ffffff",
+              "surface-dim": "#e3e5c3",
+              "outline-variant": "#babba4",
+              "secondary-fixed-dim": "#addde3",
+              "tertiary-fixed-dim": "#a4ec97",
+              "secondary-container": "#bbebf1",
+              "on-tertiary-fixed": "#044e0d",
+              "on-primary-fixed": "#513241",
+              "on-tertiary-fixed-variant": "#2a6c28",
+              "on-secondary": "#ffffff",
+              "tertiary": "#30722d",
+              "primary-fixed": "#fed0e3",
+              "inverse-on-surface": "#9e9e88",
+              "outline": "#81826d",
+              "on-secondary-fixed-variant": "#346268",
+              "error-container": "#f95630",
+              "on-surface": "#373928",
+              "surface-bright": "#fefee5",
+              "surface-container-highest": "#e9eaca",
+              "primary-dim": "#714e5e",
+              "on-primary-container": "#664554",
+              "background": "#fefee5",
+              "surface-tint": "#7e5a6a",
+              "error": "#be2d06",
+              "surface-container-high": "#eff0d1",
+              "surface-container-low": "#fbfbe0",
+              "on-tertiary-container": "#1f621f",
+              "surface-variant": "#e9eaca",
+              "secondary": "#3d6b71",
+              "on-background": "#373928",
+              "inverse-surface": "#0e0f03",
+              "on-secondary-container": "#29595e",
+              "on-error": "#ffffff",
+              "primary": "#7e5a6a",
+              "on-tertiary": "#ffffff",
+              "tertiary-fixed": "#b1faa4",
+              "on-primary": "#ffffff",
+              "primary-container": "#fed0e3",
+              "secondary-fixed": "#bbebf1",
+              "primary-fixed-dim": "#f0c3d5",
+              "tertiary-container": "#b1faa4",
+              "inverse-primary": "#fed0e3",
+              "tertiary-dim": "#236522"
+            },
+            fontFamily: {
+              "headline": ["Plus Jakarta Sans"],
+              "body": ["Be Vietnam Pro"],
+              "label": ["Be Vietnam Pro"]
+            },
+            borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            line-height: 1;
+            text-transform: none;
+            letter-spacing: normal;
+            word-wrap: normal;
+            white-space: nowrap;
+            direction: ltr;
+        }
+        @keyframes custom-pulse {
+            0%, 100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.05); opacity: 0.9; }
+        }
+        .animate-status-pulse {
+            animation: custom-pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface font-body overflow-hidden h-screen">
+<!-- Top Navigation Anchor -->
+<header class="bg-[#fefee5] dark:bg-[#1c1c16] flex justify-between items-center px-8 h-20 w-full fixed top-0 z-50">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[#7e5a6a] dark:text-[#fed0e3] text-3xl" data-icon="restaurant">restaurant</span>
+<h1 class="font-['Plus_Jakarta_Sans'] font-black italic text-[#7e5a6a] dark:text-[#fed0e3] text-2xl tracking-tight">Culinary Sanctuary</h1>
+</div>
+<div class="flex items-center gap-6">
+<div class="hidden md:flex gap-8">
+<span class="text-[#373928] opacity-60 font-label font-medium cursor-pointer">Menu</span>
+<span class="text-[#373928] opacity-60 font-label font-medium cursor-pointer">POS</span>
+<span class="text-[#373928] opacity-60 font-label font-medium cursor-pointer">Kitchen</span>
+<span class="text-[#7e5a6a] border-b-2 border-[#7e5a6a] font-label font-medium cursor-pointer">Status</span>
+</div>
+<div class="w-10 h-10 rounded-full bg-primary-container flex items-center justify-center overflow-hidden border-2 border-primary">
+<img alt="Staff Profile" data-alt="Close up portrait of a friendly professional chef in a clean white uniform with a soft bokeh background of a boutique cafe" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBYv8Ayz-mhoU7Djsy-HT8fXbOSOzI0UXqeCIZkINMfOYarxyStDQSkL_oFLWJasCU5yM_yIX8MbYpgDd_gldmDlMbDVFDTVU3Ddw77IBhEQ6z4J_gYthhUrzLBIziTtuznjwxNbpv1f0IpwcJSwfRaOkxfA-2fiiea6oYJYHY4SFDTvsg8xp8DsdFApLOBInnUQG1eav9uY_YnhC3XUbdZ2w0RrHy92wR_owGUSqMAY85hiQ_p3ePER8U5yNMLzcV_RVwHZy_z_d7X"/>
+</div>
+</div>
+</header>
+<main class="pt-20 h-full flex flex-col md:flex-row overflow-hidden">
+<!-- Left Section: Preparing -->
+<section class="flex-1 bg-secondary-container/40 flex flex-col">
+<div class="p-8 md:p-12">
+<div class="flex items-center gap-4 mb-8">
+<span class="material-symbols-outlined text-secondary text-4xl" data-icon="outdoor_grill">outdoor_grill</span>
+<h2 class="font-headline font-bold text-4xl tracking-tight text-on-secondary-container">Preparing</h2>
+</div>
+<!-- Number Grid -->
+<div class="grid grid-cols-2 lg:grid-cols-3 gap-6">
+<div class="bg-surface-container-lowest p-8 rounded-lg flex flex-col items-center justify-center aspect-square transition-transform hover:scale-105 duration-300">
+<span class="text-secondary font-headline font-extrabold text-7xl">128</span>
+<span class="font-label text-on-surface-variant font-medium mt-2">Station 2</span>
+</div>
+<div class="bg-surface-container-lowest p-8 rounded-lg flex flex-col items-center justify-center aspect-square transition-transform hover:scale-105 duration-300">
+<span class="text-secondary font-headline font-extrabold text-7xl">142</span>
+<span class="font-label text-on-surface-variant font-medium mt-2">Main Kitchen</span>
+</div>
+<div class="bg-surface-container-lowest p-8 rounded-lg flex flex-col items-center justify-center aspect-square transition-transform hover:scale-105 duration-300">
+<span class="text-secondary font-headline font-extrabold text-7xl">145</span>
+<span class="font-label text-on-surface-variant font-medium mt-2">Patisserie</span>
+</div>
+<div class="bg-surface-container-lowest p-8 rounded-lg flex flex-col items-center justify-center aspect-square transition-transform hover:scale-105 duration-300 opacity-60">
+<span class="text-secondary font-headline font-extrabold text-7xl">146</span>
+<span class="font-label text-on-surface-variant font-medium mt-2">Drinks Bar</span>
+</div>
+<div class="bg-surface-container-lowest p-8 rounded-lg flex flex-col items-center justify-center aspect-square transition-transform hover:scale-105 duration-300 opacity-40">
+<span class="text-secondary font-headline font-extrabold text-7xl">147</span>
+<span class="font-label text-on-surface-variant font-medium mt-2">Main Kitchen</span>
+</div>
+<div class="bg-surface-container-lowest p-8 rounded-lg flex flex-col items-center justify-center aspect-square transition-transform hover:scale-105 duration-300 opacity-20">
+<span class="text-secondary font-headline font-extrabold text-7xl">148</span>
+<span class="font-label text-on-surface-variant font-medium mt-2">Station 1</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Right Section: Ready to Collect -->
+<section class="flex-1 bg-tertiary-container flex flex-col relative overflow-hidden">
+<!-- Decorative Background Pattern -->
+<div class="absolute inset-0 opacity-10 pointer-events-none">
+<div class="absolute top-10 right-10 w-64 h-64 bg-tertiary rounded-full blur-3xl"></div>
+<div class="absolute bottom-20 left-20 w-48 h-48 bg-on-tertiary-container rounded-full blur-3xl"></div>
+</div>
+<div class="p-8 md:p-12 relative z-10 flex flex-col h-full">
+<div class="flex items-center gap-4 mb-8">
+<span class="material-symbols-outlined text-tertiary text-4xl" data-icon="notifications_active" style="font-variation-settings: 'FILL' 1;">notifications_active</span>
+<h2 class="font-headline font-bold text-4xl tracking-tight text-on-tertiary-container">Ready to Collect</h2>
+</div>
+<div class="flex-1 flex flex-col gap-8 justify-center items-center">
+<!-- Main Ready Card -->
+<div class="w-full max-w-md bg-white rounded-xl shadow-[0_20px_50px_rgba(31,98,31,0.15)] p-12 flex flex-col items-center animate-status-pulse">
+<span class="font-headline font-extrabold text-[10rem] leading-none text-tertiary tracking-tighter">124</span>
+<div class="flex items-center gap-2 mt-4 py-2 px-6 bg-tertiary-container rounded-full">
+<span class="material-symbols-outlined text-tertiary text-xl" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="font-label font-bold text-on-tertiary-container text-xl">PICKUP NOW</span>
+</div>
+</div>
+<!-- Secondary Ready List -->
+<div class="w-full max-w-md grid grid-cols-2 gap-4">
+<div class="bg-white/80 backdrop-blur-sm rounded-lg p-6 flex flex-col items-center shadow-sm">
+<span class="font-headline font-bold text-5xl text-tertiary">119</span>
+<span class="font-label text-on-tertiary-container/60 text-sm mt-1">COUNTER A</span>
+</div>
+<div class="bg-white/80 backdrop-blur-sm rounded-lg p-6 flex flex-col items-center shadow-sm">
+<span class="font-headline font-bold text-5xl text-tertiary">121</span>
+<span class="font-label text-on-tertiary-container/60 text-sm mt-1">DRINKS HUB</span>
+</div>
+</div>
+</div>
+<!-- Footer branding / Info -->
+<div class="mt-auto pt-8 flex justify-between items-end">
+<div>
+<p class="font-label text-on-tertiary-container/40 text-sm">Please have your order ticket ready</p>
+</div>
+<div class="text-right">
+<p class="font-headline font-black text-2xl text-tertiary italic opacity-20">Sanctuary</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Bottom Navigation Shell (Mobile Only Responsive Pivot) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-3 bg-[#fefee5]/60 backdrop-blur-xl border-t border-[#373928]/10 shadow-[0_-12px_32px_rgba(55,57,40,0.06)] rounded-t-[2.5rem]">
+<div class="flex flex-col items-center justify-center text-[#373928] dark:text-[#fefee5] opacity-50 hover:opacity-80">
+<span class="material-symbols-outlined" data-icon="menu_book">menu_book</span>
+<span class="font-['Be_Vietnam_Pro'] font-medium text-[11px]">Menu</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#373928] dark:text-[#fefee5] opacity-50 hover:opacity-80">
+<span class="material-symbols-outlined" data-icon="point_of_sale">point_of_sale</span>
+<span class="font-['Be_Vietnam_Pro'] font-medium text-[11px]">POS</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#373928] dark:text-[#fefee5] opacity-50 hover:opacity-80">
+<span class="material-symbols-outlined" data-icon="outdoor_grill">outdoor_grill</span>
+<span class="font-['Be_Vietnam_Pro'] font-medium text-[11px]">Kitchen</span>
+</div>
+<div class="flex flex-col items-center justify-center bg-[#fed0e3] dark:bg-[#7e5a6a] text-[#7e5a6a] dark:text-[#fed0e3] rounded-full px-6 py-2">
+<span class="material-symbols-outlined" data-icon="notifications_active" style="font-variation-settings: 'FILL' 1;">notifications_active</span>
+<span class="font-['Be_Vietnam_Pro'] font-medium text-[11px]">Status</span>
+</div>
+</nav>
+</body></html>
