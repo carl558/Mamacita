@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+
+<html class="light" lang="sv"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Be+Vietnam+Pro:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-error-container": "#520c00",
+              "error-dim": "#b92902",
+              "surface": "#fefee5",
+              "on-primary-fixed-variant": "#704e5e",
+              "on-secondary-fixed": "#13464b",
+              "secondary-dim": "#305f65",
+              "on-surface-variant": "#646652",
+              "surface-container": "#f5f6d9",
+              "surface-container-lowest": "#ffffff",
+              "surface-dim": "#e3e5c3",
+              "outline-variant": "#babba4",
+              "secondary-fixed-dim": "#addde3",
+              "tertiary-fixed-dim": "#a4ec97",
+              "secondary-container": "#bbebf1",
+              "on-tertiary-fixed": "#044e0d",
+              "on-primary-fixed": "#513241",
+              "on-tertiary-fixed-variant": "#2a6c28",
+              "on-secondary": "#ffffff",
+              "tertiary": "#30722d",
+              "primary-fixed": "#fed0e3",
+              "inverse-on-surface": "#9e9e88",
+              "outline": "#81826d",
+              "on-secondary-fixed-variant": "#346268",
+              "error-container": "#f95630",
+              "on-surface": "#373928",
+              "surface-bright": "#fefee5",
+              "surface-container-highest": "#e9eaca",
+              "primary-dim": "#714e5e",
+              "on-primary-container": "#664554",
+              "background": "#fefee5",
+              "surface-tint": "#7e5a6a",
+              "error": "#be2d06",
+              "surface-container-high": "#eff0d1",
+              "surface-container-low": "#fbfbe0",
+              "on-tertiary-container": "#1f621f",
+              "surface-variant": "#e9eaca",
+              "secondary": "#3d6b71",
+              "on-background": "#373928",
+              "inverse-surface": "#0e0f03",
+              "on-secondary-container": "#29595e",
+              "on-error": "#ffffff",
+              "primary": "#7e5a6a",
+              "on-tertiary": "#ffffff",
+              "tertiary-fixed": "#b1faa4",
+              "on-primary": "#ffffff",
+              "primary-container": "#fed0e3",
+              "secondary-fixed": "#bbebf1",
+              "primary-fixed-dim": "#f0c3d5",
+              "tertiary-container": "#b1faa4",
+              "inverse-primary": "#fed0e3",
+              "tertiary-dim": "#236522"
+            },
+            fontFamily: {
+              "headline": ["Plus Jakarta Sans"],
+              "body": ["Be Vietnam Pro"],
+              "label": ["Be Vietnam Pro"]
+            },
+            borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .glass-nav {
+        background: rgba(254, 254, 229, 0.6);
+        backdrop-filter: blur(20px);
+      }
+      .active-pill-shadow {
+        box-shadow: 0 4px 14px 0 rgba(126, 90, 106, 0.15);
+      }
+      .custom-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .custom-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface font-body text-on-surface selection:bg-primary-container selection:text-on-primary-container">
+<!-- Top Navigation (Shared Component: TopAppBar) -->
+<header class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-8 h-20 bg-[#fefee5] dark:bg-[#1c1c16]">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="restaurant">restaurant</span>
+<h1 class="font-headline font-bold text-2xl tracking-tight text-primary">Culinary Sanctuary</h1>
+</div>
+<div class="flex items-center gap-4">
+<div class="hidden md:flex items-center gap-6">
+<button class="font-headline font-bold text-sm tracking-wide text-primary border-b-2 border-primary py-1">Menu</button>
+<button class="font-headline font-medium text-sm tracking-wide text-on-surface opacity-60 hover:opacity-100 transition-opacity">POS</button>
+<button class="font-headline font-medium text-sm tracking-wide text-on-surface opacity-60 hover:opacity-100 transition-opacity">Kitchen</button>
+<button class="font-headline font-medium text-sm tracking-wide text-on-surface opacity-60 hover:opacity-100 transition-opacity">Status</button>
+</div>
+<div class="w-10 h-10 rounded-full bg-primary-container flex items-center justify-center overflow-hidden">
+<img alt="Profile" class="w-full h-full object-cover" data-alt="close-up studio portrait of a friendly smiling store manager in a clean linen apron background soft pastel" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBISDQuCc0JWwbdW1H10vrznfTmm-Ni5gzWlyObobHZLdKk50ZNrwIub3NRA-t105q1i1EZKN8BU_YatIpKvc6UJNzGf9KY8PE6EIk16XmVwVzJruIweBJS5gJ2Izm252oUQp3rKD0pV6YRki1UbXyAuEXr_uRx5GaFT4zp3_JLjHmZkPGIR7A0cL6F2-W4MFNaMmnvWziLwerbREaPkXoz86rVAxsnGFlKr1H-uKjNdzmdYKIG_798scQ2Xbw5evSNzAzvEnJeRxfN"/>
+</div>
+</div>
+</header>
+<main class="pt-24 pb-32 px-6 md:px-12 max-w-7xl mx-auto">
+<!-- Hero Section / Header -->
+<section class="mb-10 text-center md:text-left">
+<h2 class="font-headline font-extrabold text-4xl md:text-5xl text-on-surface mb-2">Välkommen till Kiosken</h2>
+<p class="text-on-surface-variant text-lg">Välj dina favoriter från vår noga utvalda meny.</p>
+</section>
+<!-- Category Tabs -->
+<nav class="flex gap-4 mb-10 overflow-x-auto custom-scrollbar pb-2">
+<button class="bg-primary-container text-on-primary-container px-8 py-3 rounded-full font-headline font-bold text-sm transition-all active:scale-95 whitespace-nowrap active-pill-shadow">
+                All
+            </button>
+<button class="bg-surface-container-high text-on-surface px-8 py-3 rounded-full font-headline font-semibold text-sm transition-all hover:bg-surface-container-highest active:scale-95 whitespace-nowrap">
+                Main
+            </button>
+<button class="bg-surface-container-high text-on-surface px-8 py-3 rounded-full font-headline font-semibold text-sm transition-all hover:bg-surface-container-highest active:scale-95 whitespace-nowrap">
+                Sides
+            </button>
+<button class="bg-surface-container-high text-on-surface px-8 py-3 rounded-full font-headline font-semibold text-sm transition-all hover:bg-surface-container-highest active:scale-95 whitespace-nowrap">
+                Drinks
+            </button>
+<button class="bg-surface-container-high text-on-surface px-8 py-3 rounded-full font-headline font-semibold text-sm transition-all hover:bg-surface-container-highest active:scale-95 whitespace-nowrap">
+                Desserts
+            </button>
+</nav>
+<!-- Menu Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+<!-- Item Card 1 -->
+<div class="bg-surface-container-lowest rounded-lg overflow-hidden flex flex-col group transition-all hover:-translate-y-1">
+<div class="relative h-56 w-full overflow-hidden">
+<img alt="Gourmet Burger" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Close-up of a gourmet wagyu beef burger with melting cheese, fresh lettuce, and brioche bun on a soft pastel background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDLuaJ45SFXskzHMSfdwFcrBqq_1b2mhn7v6oN_Bfvtsvn7DrdCCD-PtQEeytST1mLPlc-PTkNGDRLg2gbA3xQfb6iA_GzSqvhr4BsjLUHOI2d-EZV-YQrDlfMWG9NK32npZUczBtKdV5d-eA-F-AfQjKYG09D6kBsM0h6Uh9LJnlch1ZIFwiu-LXfWxezoiYaTh-LO54J2ku3hXZK94JFow6QYYw1T_aWdeX62vzJZ0V5LlKptrXOwd-FHxrfezr-1SGrowzdPWAJM"/>
+<div class="absolute top-4 right-4 bg-tertiary-container text-on-tertiary-container px-3 py-1 rounded-full text-xs font-bold font-headline uppercase tracking-wider">
+                        Populär
+                    </div>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-headline font-bold text-xl text-on-surface">Sanctuary Burger</h3>
+<span class="text-primary font-bold text-lg">145 kr</span>
+</div>
+<p class="text-on-surface-variant text-sm mb-6 line-clamp-2">Premium högrev, lagrad cheddar, karamelliserad lök och vår signaturdressing på brioche.</p>
+<button class="mt-auto w-full py-3 px-6 bg-gradient-to-br from-primary to-primary-dim text-white rounded-full font-headline font-bold text-sm flex items-center justify-center gap-2 hover:opacity-90 transition-opacity active:scale-95 shadow-sm">
+<span class="material-symbols-outlined text-[20px]" data-icon="add_shopping_cart">add_shopping_cart</span>
+                        Lägg till
+                    </button>
+</div>
+</div>
+<!-- Item Card 2 -->
+<div class="bg-surface-container-lowest rounded-lg overflow-hidden flex flex-col group transition-all hover:-translate-y-1">
+<div class="relative h-56 w-full overflow-hidden">
+<img alt="Truffle Fries" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Crispy golden french fries sprinkled with parmesan and truffle herbs in a stylish ceramic bowl, soft natural lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCW32gllymL0vOJYqpxjw_HIlkmD3i2CP3g23T76iwx4WEXco4E5XrJN3OO9NOVBPLcDZasj8EkeZNACerUVm4_ehe6bHjDfsDwBPbmOWvCAfyfEYszG7KBiGpex8KNlFiJcy13HMnVNepgTjyq7hcrV0K_QXnNWoPHoh2V9Jq5vBZw0HLB8-ixh_SeuFSLogZjvlzyzImVgh-aENcXAgFMZhTApYHzWZscJhG-_1tvJO1RsRHeJlcRBajkXuKyw7py6B5oLH_yZ8wi"/>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-headline font-bold text-xl text-on-surface">Tryffelpommes</h3>
+<span class="text-primary font-bold text-lg">55 kr</span>
+</div>
+<p class="text-on-surface-variant text-sm mb-6 line-clamp-2">Handskurna pommes frites med tryffelolja, parmesan och färsk persilja.</p>
+<button class="mt-auto w-full py-3 px-6 bg-gradient-to-br from-primary to-primary-dim text-white rounded-full font-headline font-bold text-sm flex items-center justify-center gap-2 hover:opacity-90 transition-opacity active:scale-95 shadow-sm">
+<span class="material-symbols-outlined text-[20px]" data-icon="add_shopping_cart">add_shopping_cart</span>
+                        Lägg till
+                    </button>
+</div>
+</div>
+<!-- Item Card 3 -->
+<div class="bg-surface-container-lowest rounded-lg overflow-hidden flex flex-col group transition-all hover:-translate-y-1">
+<div class="relative h-56 w-full overflow-hidden">
+<img alt="Elderflower Soda" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Refreshing glass of sparkling elderflower soda with ice and a sprig of mint, bright airy photography with pastel pink background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCslAs8-L1NGEaqQ_xxHSvG66Doy6Fmb-_D7aO9TCw78QIZtu-be4X_nr6zGqw32gwDufBCXWhF0c90xKmwqyeEEKL92egfvctKz7q5CRjJO_h0b8GAeGwULt04BH3l2yxg1uuanY2FuFW1OrX2VbZwiVrWOh0O6UJ2U_vcH-w9i1RURKow7xuAF4EjeJf1-lLDcrUndgv-ySfh1zJIVDEesLsUDrhJ3SLA-cElmpjgOF96Bk-rRvmYny29q9lXeO1TCTj-rpCFDgl2"/>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-headline font-bold text-xl text-on-surface">Fläder &amp; Lime</h3>
+<span class="text-primary font-bold text-lg">39 kr</span>
+</div>
+<p class="text-on-surface-variant text-sm mb-6 line-clamp-2">Hemgjord fläderläsk med frisk lime och krossad is.</p>
+<button class="mt-auto w-full py-3 px-6 bg-gradient-to-br from-primary to-primary-dim text-white rounded-full font-headline font-bold text-sm flex items-center justify-center gap-2 hover:opacity-90 transition-opacity active:scale-95 shadow-sm">
+<span class="material-symbols-outlined text-[20px]" data-icon="add_shopping_cart">add_shopping_cart</span>
+                        Lägg till
+                    </button>
+</div>
+</div>
+<!-- Item Card 4 -->
+<div class="bg-surface-container-lowest rounded-lg overflow-hidden flex flex-col group transition-all hover:-translate-y-1">
+<div class="relative h-56 w-full overflow-hidden">
+<img alt="Green Bowl" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Healthy colorful salad bowl with avocado, quinoa, and fresh greens, bright morning sunlight on a pale wood table" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDayDZ5UiyKxkadBNX9-IkW__H2Wt59jqX7E8s4WbygVpseSR9DmuNK_NkCcfVGfBuG5b8bB9YomB5aaCq4lEDTPm8HevOab7Lw-dkYGhfTQo60t63cSL9-OhPy_HYr0D3NCqS6tA8tnxMdxYyhiZTPTq4GmdRF3mxrE-Xhqocp70qMOM02CWsk1NOvcuLobaMigCXtnPabGDz4zGMQOmTfmTqf2c6e3B8VnU5EzBnYvDqvrWMh0NhLU122SRCZwWgoLqF_OPqINeH_"/>
+<div class="absolute top-4 left-4 bg-tertiary text-white px-3 py-1 rounded-full text-xs font-bold font-headline uppercase tracking-wider">
+                        Vego
+                    </div>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-headline font-bold text-xl text-on-surface">Harvest Bowl</h3>
+<span class="text-primary font-bold text-lg">129 kr</span>
+</div>
+<p class="text-on-surface-variant text-sm mb-6 line-clamp-2">Ugnsrostad sötpotatis, quinoa, avokado, picklad rödlök och tahinidressing.</p>
+<button class="mt-auto w-full py-3 px-6 bg-gradient-to-br from-primary to-primary-dim text-white rounded-full font-headline font-bold text-sm flex items-center justify-center gap-2 hover:opacity-90 transition-opacity active:scale-95 shadow-sm">
+<span class="material-symbols-outlined text-[20px]" data-icon="add_shopping_cart">add_shopping_cart</span>
+                        Lägg till
+                    </button>
+</div>
+</div>
+<!-- Item Card 5 -->
+<div class="bg-surface-container-lowest rounded-lg overflow-hidden flex flex-col group transition-all hover:-translate-y-1">
+<div class="relative h-56 w-full overflow-hidden">
+<img alt="Strawberry Shake" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Thick creamy strawberry milkshake topped with whipped cream and a single fresh strawberry in a tall vintage glass" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDAG64qV9kqbGjhKmvu5mNB_q9rRW1OrkugdEn4ESE7nyw9PQuXq98zS0wc--NdG_BpcB2Y-UlniIlhTL7S9AbFMnd8wqC-KuY2IKDoz-tzFaDU5Fyq8Lje-KAKdY5RRJAqH34rpBeXQWmgDlXZLy3iRIoDOiTAN1pzQp9XHZ9lcxgznzlK9ga6mXF2tS3L6wlUxZC6dr0h3rLbpznezLNikyqgjGxyOpKrdFvNIoBH2HN-pMxu-WEY7c-4yrvMyVUC7BlSqZFGwktB"/>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-headline font-bold text-xl text-on-surface">Berry Bliss Shake</h3>
+<span class="text-primary font-bold text-lg">65 kr</span>
+</div>
+<p class="text-on-surface-variant text-sm mb-6 line-clamp-2">Lyxig milkshake gjord på färska jordgubbar och hantverksglass.</p>
+<button class="mt-auto w-full py-3 px-6 bg-gradient-to-br from-primary to-primary-dim text-white rounded-full font-headline font-bold text-sm flex items-center justify-center gap-2 hover:opacity-90 transition-opacity active:scale-95 shadow-sm">
+<span class="material-symbols-outlined text-[20px]" data-icon="add_shopping_cart">add_shopping_cart</span>
+                        Lägg till
+                    </button>
+</div>
+</div>
+<!-- Item Card 6 -->
+<div class="bg-surface-container-lowest rounded-lg overflow-hidden flex flex-col group transition-all hover:-translate-y-1">
+<div class="relative h-56 w-full overflow-hidden">
+<img alt="BBQ Burger" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Double smash burger with crispy onion rings, BBQ sauce, and melted cheddar on a soft toasted bun, warm studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDHYWewrquv9jHV-FJ917KttqXpzJQVwnkhPkYY2Pb9AisWXhgOXwWdex-LdFTBCtG4tpA2XM7pVp5fRW3sUsj_xl_zCiSPIph0oiBHOj1Uds3P8lp_AQ0fP8iY4GfGk5FSBE9vqdj8IEEhjQlGDGX-cSI4ZsMv4ngqIQJ7aXCD0f3N87Ih5ppCafeNz_O04i5_J8oxNR0zG3PyshQvGXZErtGlwrXKd3cy-N0HfRZHNe1rJpdSLLoWIJoUOhevu8nMarxOzNWgdxMQ"/>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-headline font-bold text-xl text-on-surface">Smoky BBQ</h3>
+<span class="text-primary font-bold text-lg">155 kr</span>
+</div>
+<p class="text-on-surface-variant text-sm mb-6 line-clamp-2">Dubbel smashburger med rökig BBQ-sås, krispiga lökringar och bacon.</p>
+<button class="mt-auto w-full py-3 px-6 bg-gradient-to-br from-primary to-primary-dim text-white rounded-full font-headline font-bold text-sm flex items-center justify-center gap-2 hover:opacity-90 transition-opacity active:scale-95 shadow-sm">
+<span class="material-symbols-outlined text-[20px]" data-icon="add_shopping_cart">add_shopping_cart</span>
+                        Lägg till
+                    </button>
+</div>
+</div>
+<!-- Item Card 7 -->
+<div class="bg-surface-container-lowest rounded-lg overflow-hidden flex flex-col group transition-all hover:-translate-y-1">
+<div class="relative h-56 w-full overflow-hidden">
+<img alt="Coleslaw" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Fresh homemade creamy coleslaw with shredded carrots and cabbage in a small minimalist bowl, airy kitchen setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAf6XA64Mlh2xREzQlZKQeWvyZu7AX2RhuEAFWevRFrRPogCM5FYcI8iI_RRlcJdNe0Jm-ArQT7-GvUIw3l_ukdj-Ul6HI5QoT79sZDHoFX8FJ4U3vIayYnbLpCmbZKPTiyHj5yvEVif0zsXRdkTQhdg4gDW4fWnq3mRfsGfQdbb1F7cVG3LUexC55Cisns1DuD_9BHaaaLhOU79tugcvJjIjbq9r6p44E1R2R6uEWXmRgeonMWgtvoKMSTimRK7eJySTXYkrKx43Rj"/>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-headline font-bold text-xl text-on-surface">Zesty Slaw</h3>
+<span class="text-primary font-bold text-lg">35 kr</span>
+</div>
+<p class="text-on-surface-variant text-sm mb-6 line-clamp-2">Klassisk krämig coleslaw med en hint av citron och färsk peppar.</p>
+<button class="mt-auto w-full py-3 px-6 bg-gradient-to-br from-primary to-primary-dim text-white rounded-full font-headline font-bold text-sm flex items-center justify-center gap-2 hover:opacity-90 transition-opacity active:scale-95 shadow-sm">
+<span class="material-symbols-outlined text-[20px]" data-icon="add_shopping_cart">add_shopping_cart</span>
+                        Lägg till
+                    </button>
+</div>
+</div>
+<!-- Item Card 8 -->
+<div class="bg-surface-container-lowest rounded-lg overflow-hidden flex flex-col group transition-all hover:-translate-y-1">
+<div class="relative h-56 w-full overflow-hidden">
+<img alt="Coffee" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Flat white coffee with latte art in a textured ceramic mug, soft morning shadows on a light stone surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAp8N4feeT3K-mIRdpV90AQAT4NXeYdRP64AOWO6xwpiaelShNCcsdZDDOZIXicdT4W5bFr0czJ0grOW8lt2U7fHW7pA4dG-UE8lkGgi6Xc-dKX8Ey3vpCBTh6hFVULgOl-o9gnyQPPMEfSzBWzq6nAfhWUgvkN7mvz_aPl0k5R7NLsEyfuU2xlD6GSTUfCOvWAyKGy4lPgGzEpwyfefFoxSPkfxWYDPzDRbJppnU2XAm5b7kDK4TSd5fqetwM5pdgpCFz0ejOtsHS2"/>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-headline font-bold text-xl text-on-surface">Artisan Latte</h3>
+<span class="text-primary font-bold text-lg">45 kr</span>
+</div>
+<p class="text-on-surface-variant text-sm mb-6 line-clamp-2">Lokalrostade bönor och krämig havremjölk med vacker latte art.</p>
+<button class="mt-auto w-full py-3 px-6 bg-gradient-to-br from-primary to-primary-dim text-white rounded-full font-headline font-bold text-sm flex items-center justify-center gap-2 hover:opacity-90 transition-opacity active:scale-95 shadow-sm">
+<span class="material-symbols-outlined text-[20px]" data-icon="add_shopping_cart">add_shopping_cart</span>
+                        Lägg till
+                    </button>
+</div>
+</div>
+</div>
+</main>
+<!-- Bottom Bar (Shared Component Strategy: BottomNavBar) -->
+<div class="fixed bottom-0 left-0 w-full z-50 glass-nav px-6 pb-8 pt-4 border-t border-on-surface/5">
+<div class="max-w-7xl mx-auto flex items-center justify-between bg-surface-container-lowest rounded-full p-2 shadow-[0_-12px_32px_rgba(55,57,40,0.06)] border border-outline-variant/10">
+<div class="flex items-center gap-6 pl-6">
+<div class="flex flex-col">
+<span class="text-xs font-headline font-medium text-on-surface-variant uppercase tracking-widest">Din Beställning</span>
+<span class="text-xl font-headline font-extrabold text-on-surface">239 kr</span>
+</div>
+<div class="h-8 w-[1px] bg-outline-variant/20"></div>
+<div class="flex -space-x-3">
+<div class="w-10 h-10 rounded-full border-2 border-surface-container-lowest bg-primary-container overflow-hidden">
+<img alt="Order 1" class="w-full h-full object-cover" data-alt="close-up of a burger icon in a soft pastel aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBnHDJx9kf6U-WyZscM1JZBOQJeCS-IVY0zbmLM2H3EhMdRBCO-zS4PURSOyhkVF8kfh0qV0eEAHPkOCsvAj-vhvwMwbFKEVW94sSKEfklBdSWo87oItk-smlYDb7EJ4ezwRNrjm9AChZoLFNaz5NdHKsvG3zwIHX7qqeDtM52X2gWxvc1YPvcC4DWjf3MbbudM9WEdDP1aMrTRnP4LlOrHg4gGgxp3NSVxCfSaNFOHpaPRU4LDHtSI3eKVPmnoeWZCKqfrLIhqeqoT"/>
+</div>
+<div class="w-10 h-10 rounded-full border-2 border-surface-container-lowest bg-secondary-container overflow-hidden">
+<img alt="Order 2" class="w-full h-full object-cover" data-alt="close-up of fries icon in a soft pastel aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDs5wi4iHdlHnKnxCrhRQiNG7JWzQQU4tb4zjHODQaT7xd5-ZZmfsJ-NwCmLiKoJTuYMJGtSFRAr4iHBOI_2kCgvLSxLVI3ndNkHiCT0cAv7tRv33YfjwOdb7WZEcFTr46Lg2ewTyT_2QM16jonu4G6BcrZrRJdl9Xq74R-KfBg6sdluk2-zFCD-t-MuFGIDSC4bhktDu6N-HY_dLrRvbYxvcd6bgiTWo68ZupdSFZZNTHVJM-K550IF4y3wdJ-DzdIWp-T19U8wmlO"/>
+</div>
+<div class="w-10 h-10 rounded-full border-2 border-surface-container-lowest bg-surface-container-high flex items-center justify-center text-xs font-bold text-primary">
+                        +1
+                    </div>
+</div>
+</div>
+<button class="bg-primary text-white px-10 py-4 rounded-full font-headline font-bold text-base flex items-center gap-3 transition-all hover:shadow-lg active:scale-95">
+                Visa Varukorg
+                <span class="material-symbols-outlined text-[22px]" data-icon="shopping_basket">shopping_basket</span>
+</button>
+</div>
+</div>
+<!-- Mobile Navigation Shell (Conditional BottomNavBar) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full z-40 bg-[#fefee5]/60 backdrop-blur-xl flex justify-around items-center px-4 pb-6 pt-3 border-t border-[#373928]/10 md:hidden">
+<div class="flex flex-col items-center justify-center bg-[#fed0e3] text-[#7e5a6a] rounded-full px-6 py-2">
+<span class="material-symbols-outlined" data-icon="menu_book">menu_book</span>
+<span class="font-['Be_Vietnam_Pro'] font-medium text-[11px]">Menu</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#373928] opacity-50">
+<span class="material-symbols-outlined" data-icon="point_of_sale">point_of_sale</span>
+<span class="font-['Be_Vietnam_Pro'] font-medium text-[11px]">POS</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#373928] opacity-50">
+<span class="material-symbols-outlined" data-icon="outdoor_grill">outdoor_grill</span>
+<span class="font-['Be_Vietnam_Pro'] font-medium text-[11px]">Kitchen</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#373928] opacity-50">
+<span class="material-symbols-outlined" data-icon="notifications_active">notifications_active</span>
+<span class="font-['Be_Vietnam_Pro'] font-medium text-[11px]">Status</span>
+</div>
+</nav>
+</body></html>
